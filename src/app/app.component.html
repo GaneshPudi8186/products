@@ -1,0 +1,19 @@
+<body>
+<div class="button">
+  <button (click)="fun($event)">men's clothing</button>
+  <button (click)="fun($event)">women's clothing</button>
+  <button (click)="fun($event)">electronics</button>
+  <button (click)="fun($event)">jewelery</button>
+ <!-- <h2>ng-build command</h2>-->
+</div>
+<div align="right">
+  <button  (click)="change()" id="ch" >ChangeMode</button>
+</div>
+<div class="products">
+  <div *ngFor="let p of products"  [ngClass]="{dark:isDark}">
+    <img src="{{p.image}}" class="product" alt=""/>
+    <h1>{{p.title}}</h1>
+    <p>{{p.price | currency:"INR"}}</p>
+  </div>
+</div>
+</body>
