@@ -12,7 +12,7 @@
 <div class="products">
   <div *ngFor="let p of products"  [ngClass]="{dark:isDark}">
     <img src="{{p.image}}" class="product" alt=""/>
-    <h1>{{p.title}}</h1>
+    <h3>{{p.title}}</h3>
     <p>{{p.price | currency:"INR"}}</p>
   </div>
 </div>
